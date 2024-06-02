@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Urbanist;
+    src: url(../fonts/Urbanist.ttf);
+}
+:root{
+    --primary-color:#5eb9f0;
+    --paragraph-color:#60697b;
+    --heading-color:#343f52;
+    --skayblue:#e5f4fd;
+    --white:#f6f6f6;
+
+    --font-primary:Urbanist;
+}
