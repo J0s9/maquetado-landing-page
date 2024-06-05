@@ -2,15 +2,25 @@
 body{
     font-family: var(--font-primary);
 }
-main{
-    /* max-width: 1200px;
-    margin: auto; */
-}
+
 .conteiner{
+    & span{
+        display: block;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        margin: 18px 0;
+        text-align: center;
+    }
     max-width: 1200px;
     margin: auto;
 }
-
+hr{
+    border: 0.5px solid #A4AEC6;
+    margin: 40px 0;
+    border: 1px 0px 0px 0px;
+}
 details{
     cursor: pointer;
     padding: 20px;
@@ -46,7 +56,7 @@ p{
 h1{
     font-size: 54px;
     color: var(--heading-color);
-    & span{
+    & .span-title{
         color: var(--primary-color);
     }
 }
@@ -54,7 +64,17 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
+    & > ul li:last-child a{
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-weight: normal;
+    }
 }
+/* nav ul li:last-child a {
+    background-color: var(--primary-color);
+} */
 ul{
     list-style: none;
     display: flex;
@@ -127,6 +147,7 @@ ul{
 }
 /*testimonial*/
 .testimonials{
+    width: 100%;
     background-color: var(--skayblue);
     padding: 70px;
     & h2{
@@ -166,6 +187,9 @@ ul{
     background-color: var(--gray-light);
 }
 .strategy-left{
+    & span{
+        text-align: left;
+    }
     & h2{
         margin-bottom: 20px;
         width: 550px;
@@ -227,6 +251,11 @@ ul{
 .team{
     background-color: var(--gray);
     padding: 60px 0;
+}
+.team-title{
+    & span{
+        text-align: left;
+    }
 }
 .team-conteiner{
     display: grid;
@@ -324,6 +353,9 @@ ul{
         padding: 9px 18px;
         border-radius: 20px;
     }
+    & span{
+        text-align: left;
+    }
 }
 
 /* footer */
@@ -358,4 +390,78 @@ footer{
 .projects-conteiner{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+}
+.footer-info {
+    display: flex;
+    gap: 20px;
+    & > div{
+        flex: 1;
+    }
+    & h3{
+        color: var(--white);
+    }
+    & .footer-info-2 p{
+        margin: 0px 0 20px;
+    }
+}
+
+.footer-info-3 ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-info-3 li {
+    margin: 5px 0; /* Añade espacio entre los elementos de la lista */
+}
+
+.footer-info-3 a {
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    color: #CACACA; /* Color del texto del enlace */
+    font-weight: normal;
+    display: block; /* Asegura que el enlace ocupe todo el espacio del <li> */
+    & a:hover {
+        text-decoration: none; /* Subraya el texto al pasar el ratón */
+    }
+}
+
+
+.input-container {
+    margin: 20px 0;
+    display: flex;
+    width: 230px;
+    height: 40px;
+    flex-grow: 1;
+}
+
+button{
+    border: 0;
+    width: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+input{
+    border: 1px solid var(--paragraph-color);
+    border-right: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: var(--heading-color);
+    &::placeholder{
+        text-align: center;
+        color: var(--paragraph-color);
+    }
+    &:focus{
+        outline: 1px solid var(--primary-color);
+        outline-offset: -1px;
+        background-color: var(--paragraph-color);
+        color: var(--white);
+    }
+}
+.footer-social{
+    margin: 20px 0;
+        display: flex;
+        gap: 12px;
 }
